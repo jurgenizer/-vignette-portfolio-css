@@ -1,0 +1,29 @@
+{
+  "name": "-vignette-portfolio-css",
+  "version": "1.0.0",
+  "description": "Sass and Bulma custom CSS setup for vignette.agency website ",
+  "keywords": [
+    "Bulma",
+    "Sass",
+    "CSS"
+  ],
+  "homepage": "https://github.com/jurgenizer/-vignette-portfolio-css#readme",
+  "bugs": {
+    "url": "https://github.com/jurgenizer/-vignette-portfolio-css/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jurgenizer/-vignette-portfolio-css.git"
+  },
+  "license": "MIT",
+  "author": "Jurgen Geitner",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bulma": "^1.0.4",
+    "sass": "^1.89.1"
+  }
+}
