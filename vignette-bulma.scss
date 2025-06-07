@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+// Set your brand colors
+$pink: #FA7C91;
+$starling-blue: #061C30;
+$bedazled-blue: #2c5784;
+$prussian-blue: #0B345B;
+$artichoke: #8E8D7C;
+$jasp-grey: #595959;
+
+// Override global Sass variables 
+@use "bulma/sass/utilities" with (
+  $family-primary: '"Quicksand", "Segoe UI", "Helvetica Neue", Arial, sans-serif',
+  $primary: $starling-blue,
+  $link: $pink,
+  $control-border-width: 1px,
+  $weight-normal: 400,
+  $weight-medium: 500,
+  $weight-semibold: 600,
+  $weight-bold: 700
+);
+
+// Import only what you need from Bulma, this order is important
+@forward "bulma/sass/base";
+@forward "bulma/sass/utilities";
+@forward "bulma/sass/components/dropdown";
+@forward "bulma/sass/components/menu";
+@forward "bulma/sass/components/navbar";
+@forward "bulma/sass/components/pagination";
+@forward "bulma/sass/elements/box";
+@forward "bulma/sass/elements/button";
+//@forward "bulma/sass/elements/container";
+@forward "bulma/sass/elements/content";
+@forward "bulma/sass/elements/icon";
+@forward "bulma/sass/elements/image";
+//@forward "bulma/sass/elements/other";
+@forward "bulma/sass/elements/title";
+@forward "bulma/sass/form";
+@forward "bulma/sass/grid/columns";
+@forward "bulma/sass/helpers";
+@forward "bulma/sass/layout/footer";
+@forward "bulma/sass/layout/section";
+@forward "bulma/sass/themes";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+
+// Override some styles
+.button.is-link,
+.button.is-primary {
+  --bulma-button-color-l: 100%;
+  color: #fff; // fallback for older browsers
+  background-color: #{$pink};
+}
+
+.navbar.is-primary,
+.navbar.is-primary .navbar-item,
+.navbar.is-primary .navbar-link,
+.navbar.is-primary .navbar-brand,
+.navbar.is-primary .navbar-burger {
+  color: #fff !important;
+  fill: #fff !important; // for SVG icons
+}
+
+.navbar.is-primary a,
+.navbar.is-primary a:visited,
+.navbar.is-primary a:active,
+.navbar.is-primary a:focus,
+.navbar.is-primary a:hover {
+  color: #fff !important;
+}
+
+.footer {
+  --bulma-footer-background-color: #{$jasp-grey};
+  background-color: var(--bulma-footer-background-color) !important;
+  color: #fff !important;
+}
+
+
+a {
+  color: #FA7C91 !important;
+  cursor: pointer;
+  text-decoration: none;
+  transition-duration: var(--bulma-duration);
+  transition-property: background-color, border-color, color;
+}
